@@ -1,116 +1,128 @@
 #include <iostream>
-#include <map>
 #include <vector>
-#include <algorithm>
+#include <map>
+#include <string>
 
 using namespace std;
 
-struct IceCream
+class Ice_cream
 {
-    long long int rate;
+private:
     string name;
-    long long int date;
+    long long rate;
+    long long time;
 
-    IceCream(string _name, long long int _rate, long long int _date) : name(_name), rate(_rate), date(_date) {}
-
-    long long int calculate_time_left(long long int now)
+public:
+    Ice_cream(string _taste, long long _rating, long long _time_at_home)
     {
-        return now + 1 - date;
+        name = _taste;
+        rate = _rating;
+        time = _time_at_home;
+    }
+    string get_taste() const { return name; }
+    long long get_rating() const { return rate; }
+    long long get_home_time() const { return time; }
+    void setTimeAtHome(long long time)
+    {
+        time = time;
     }
 };
 
 int main()
 {
+    ios_base::sync_with_stdio(false);
+    int n; // кол-во дней
+    cin >> n;
+    long long d; // максимальое время нахождения в холодильнике
+    cin >> d;
 
-    long long int days_count, permitted_time;
+    vector<Ice_cream> ice_creams; // мороженое в холодильнике
+    string buff_name0;
+    cin >> buff_name0;
+    long long buff_rate0;
+    cin >> buff_rate0;
 
-    cin >> days_count >> permitted_time;
+    long long count_of_refusales = 0; // кол-во отказов от покупки лучшего мороженого
+    Ice_cream ice_cream1(buff_name0, buff_rate0, 0);
+    ice_creams.push_back(ice_cream1);
+    long long max_time_at_home = 0;
+    long long count_of_max_time = 1;
+    // long long time = 0;
 
-    long long int refuse_from_better_counter = 0;
-    vector<IceCream> fridge;
+    map<string, long long> max_time;
+    max_time[buff_name0] = 0;
 
-    map<long long int, vector<string>> long_livers;
-
-    long long int buff_rating;
-    string buff_name;
-
-    for (long long int i = 0; i < days_count; i++)
+    for (long long i = 0; i < n - 1; i++)
     {
+        string buff_name; // вкус
         cin >> buff_name;
-        cin >> buff_rating;
+        long long buff_rate; // рейтинг
+        cin >> buff_rate;
+        Ice_cream ice_cream2(buff_name, buff_rate, 0);
 
-        if (!fridge.empty())
+        // long long time = 0;
+        for (auto &ice : ice_creams)
         {
-            long long int old = fridge.front().calculate_time_left(i);
-            long long int young = fridge.back().calculate_time_left(i);
-
-            if (old < permitted_time)
+            ice.setTimeAtHome(ice.get_home_time() + 1);
+            if (max_time_at_home < ice.get_home_time())
             {
-
-                if (buff_rating >= fridge.back().rate)
-                {
-                    fridge.push_back(IceCream(buff_name, buff_rating, i + 1));
-                }
-                else
-                {
-                    if (long_livers.count(young) != 0)
-                    {
-                        long_livers[young].push_back(fridge.front().name);
-                    }
-                    else
-                        long_livers[young] = vector<string>{fridge.front().name};
-                    if (fridge.back().rate > fridge.front().rate)
-                        refuse_from_better_counter++;
-                    fridge.pop_back();
-                }
+                max_time_at_home = ice.get_home_time();
+                count_of_max_time = 1;
+                max_time[ice.get_taste()] = max_time_at_home;
             }
-            else
+            else if (max_time_at_home == ice.get_home_time())
             {
-                if (buff_rating > fridge.back().rate)
-                {
-                    refuse_from_better_counter++;
-                }
-                else
-                {
-                    if (fridge.back().rate > fridge.front().rate)
-                        refuse_from_better_counter++;
-                }
-                if (long_livers.count(old) != 0)
-                {
-                    long_livers[old].push_back(fridge.front().name);
-                }
-                else
-                    long_livers[old] = vector<string>{fridge.front().name};
-                fridge.erase(fridge.begin());
+                count_of_max_time++;
+                max_time[ice.get_taste()] = max_time_at_home;
             }
+        }
+        if (ice_creams.size() == 0)
+        {
+            ice_creams.push_back(ice_cream2);
         }
         else
         {
-            fridge.push_back(IceCream(buff_name, buff_rating, i + 1));
+            if (ice_creams[0].get_home_time() >= d)
+            {
+                if (ice_creams[0].get_rating() < ice_cream2.get_rating())
+                {
+                    count_of_refusales++;
+                }
+                ice_creams.erase(ice_creams.begin());
+            }
+            else
+            {
+                if (ice_cream2.get_rating() >= ice_creams.back().get_rating())
+                {
+                    ice_creams.push_back(ice_cream2);
+                }
+                else
+                {
+                    ice_creams.pop_back();
+                    if (ice_creams[0].get_rating() < ice_cream2.get_rating())
+                    {
+                        count_of_refusales++;
+                    }
+                }
+            }
         }
     }
-
-    auto the_oldest = --long_livers.end();
-    sort(the_oldest->second.begin(), the_oldest->second.end());
-
-    cout << refuse_from_better_counter << endl;
-
-    cout << the_oldest->first << " " << the_oldest->second.size() << endl;
-
-    string out_list = the_oldest->second[0] + "\n";
-    long long int out_list_counter = 1;
-
-    for (int i = 1; i < the_oldest->second.size(); i++)
+    cout << count_of_refusales << endl;
+    cout << max_time_at_home << " " << count_of_max_time << endl;
+    long long count = 0;
+    for (const auto &pare : max_time)
     {
-        if (the_oldest->second[i] != the_oldest->second[i - 1])
+        if (pare.second == max_time_at_home)
         {
-            out_list.append(the_oldest->second[i]);
-            out_list_counter++;
+            count++;
         }
     }
-
-    cout << out_list_counter << endl;
-    cout << out_list;
-
-    return 0;
+    cout << count << endl;
+    for (const auto &pare : max_time)
+    {
+        if (pare.second == max_time_at_home)
+        {
+            cout << pare.first << endl;
+        }
+    }
 }

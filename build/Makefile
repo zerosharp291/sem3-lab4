@@ -129,29 +129,29 @@ change_of_strategy/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/change_of_strategy.dir/build.make CMakeFiles/change_of_strategy.dir/build
 .PHONY : change_of_strategy/fast
 
-src/change_of_strategy_rework.o: src/change_of_strategy_rework.cpp.o
-.PHONY : src/change_of_strategy_rework.o
+src/change_of_strategy.o: src/change_of_strategy.cpp.o
+.PHONY : src/change_of_strategy.o
 
 # target to build an object file
-src/change_of_strategy_rework.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/change_of_strategy.dir/build.make CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.o
-.PHONY : src/change_of_strategy_rework.cpp.o
+src/change_of_strategy.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/change_of_strategy.dir/build.make CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o
+.PHONY : src/change_of_strategy.cpp.o
 
-src/change_of_strategy_rework.i: src/change_of_strategy_rework.cpp.i
-.PHONY : src/change_of_strategy_rework.i
+src/change_of_strategy.i: src/change_of_strategy.cpp.i
+.PHONY : src/change_of_strategy.i
 
 # target to preprocess a source file
-src/change_of_strategy_rework.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/change_of_strategy.dir/build.make CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.i
-.PHONY : src/change_of_strategy_rework.cpp.i
+src/change_of_strategy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/change_of_strategy.dir/build.make CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.i
+.PHONY : src/change_of_strategy.cpp.i
 
-src/change_of_strategy_rework.s: src/change_of_strategy_rework.cpp.s
-.PHONY : src/change_of_strategy_rework.s
+src/change_of_strategy.s: src/change_of_strategy.cpp.s
+.PHONY : src/change_of_strategy.s
 
 # target to generate assembly for a file
-src/change_of_strategy_rework.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/change_of_strategy.dir/build.make CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.s
-.PHONY : src/change_of_strategy_rework.cpp.s
+src/change_of_strategy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/change_of_strategy.dir/build.make CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.s
+.PHONY : src/change_of_strategy.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... change_of_strategy"
-	@echo "... src/change_of_strategy_rework.o"
-	@echo "... src/change_of_strategy_rework.i"
-	@echo "... src/change_of_strategy_rework.s"
+	@echo "... src/change_of_strategy.o"
+	@echo "... src/change_of_strategy.i"
+	@echo "... src/change_of_strategy.s"
 .PHONY : help
 
 

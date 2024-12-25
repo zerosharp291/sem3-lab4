@@ -69,28 +69,28 @@ include CMakeFiles/change_of_strategy.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/change_of_strategy.dir/flags.make
 
-CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.o: CMakeFiles/change_of_strategy.dir/flags.make
-CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.o: /home/zerosharp/projects/semestr3/lab4/src/change_of_strategy_rework.cpp
-CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.o: CMakeFiles/change_of_strategy.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zerosharp/projects/semestr3/lab4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.o -MF CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.o.d -o CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.o -c /home/zerosharp/projects/semestr3/lab4/src/change_of_strategy_rework.cpp
+CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o: CMakeFiles/change_of_strategy.dir/flags.make
+CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o: /home/zerosharp/projects/semestr3/lab4/src/change_of_strategy.cpp
+CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o: CMakeFiles/change_of_strategy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zerosharp/projects/semestr3/lab4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o -MF CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o.d -o CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o -c /home/zerosharp/projects/semestr3/lab4/src/change_of_strategy.cpp
 
-CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zerosharp/projects/semestr3/lab4/src/change_of_strategy_rework.cpp > CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.i
+CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zerosharp/projects/semestr3/lab4/src/change_of_strategy.cpp > CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.i
 
-CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zerosharp/projects/semestr3/lab4/src/change_of_strategy_rework.cpp -o CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.s
+CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zerosharp/projects/semestr3/lab4/src/change_of_strategy.cpp -o CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.s
 
 # Object files for target change_of_strategy
 change_of_strategy_OBJECTS = \
-"CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.o"
+"CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o"
 
 # External object files for target change_of_strategy
 change_of_strategy_EXTERNAL_OBJECTS =
 
-change_of_strategy: CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.o
+change_of_strategy: CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o
 change_of_strategy: CMakeFiles/change_of_strategy.dir/build.make
 change_of_strategy: CMakeFiles/change_of_strategy.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/zerosharp/projects/semestr3/lab4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable change_of_strategy"
