@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o -o change_of_strategy 
+/usr/bin/c++ -g CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.o -o change_of_strategy 

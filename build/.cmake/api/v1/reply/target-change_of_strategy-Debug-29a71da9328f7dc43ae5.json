@@ -105,7 +105,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/change_of_strategy.cpp",
+			"path" : "src/change_of_strategy_rework.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

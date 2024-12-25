@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o"
-  "CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o.d"
+  "CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.o"
+  "CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.o.d"
   "change_of_strategy"
   "change_of_strategy.pdb"
 )

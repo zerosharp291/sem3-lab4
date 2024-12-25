@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/zerosharp/projects/semestr3/lab4/src/change_of_strategy.cpp" "CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o" "gcc" "CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o.d"
+  "/home/zerosharp/projects/semestr3/lab4/src/change_of_strategy_rework.cpp" "CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.o" "gcc" "CMakeFiles/change_of_strategy.dir/src/change_of_strategy_rework.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
