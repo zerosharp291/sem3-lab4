@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/preparement.dir/src/preparement.cpp.o -o preparement 

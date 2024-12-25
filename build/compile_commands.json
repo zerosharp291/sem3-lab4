@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/zerosharp/projects/semestr3/lab4/build",
+  "command": "/usr/bin/c++  -I/home/zerosharp/projects/semestr3/lab4/include -g -o CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o -c /home/zerosharp/projects/semestr3/lab4/src/change_of_strategy.cpp",
+  "file": "/home/zerosharp/projects/semestr3/lab4/src/change_of_strategy.cpp",
+  "output": "CMakeFiles/change_of_strategy.dir/src/change_of_strategy.cpp.o"
+}
+]

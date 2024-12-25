@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ice_cream.dir/src/ice_cream.cpp.o -o ice_cream 
